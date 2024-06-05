@@ -36,6 +36,12 @@ black_location = [(0,7),(1,7),(2,7),(3,7),(4,7),(5,7),(6,7),(7,7)
 captured_pieces_white = []
 captured_pieces_black = []
 
+turn_step = 0
+selection = 100
+valid_moves = []
+
+#load in game piece image (queen , king, rook, kinght, pawn)
+
 #main game loop
 
 run = True
