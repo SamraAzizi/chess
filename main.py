@@ -40,8 +40,11 @@ turn_step = 0
 selection = 100
 valid_moves = []
 
-#load in game piece image (queen , king, rook, kinght, pawn)
 
+
+#load in game piece image (queen , king, rook, kinght, pawn)
+black_queen = pygame.image.load("assets/images/black queen.png")
+black_queen = pygame.image.scale(black_queen)
 #main game loop
 
 run = True
