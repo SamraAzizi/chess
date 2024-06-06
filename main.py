@@ -90,34 +90,34 @@ white_queen_small = pygame.image.scale(white_queen,(45,45))
 
 
 
-white_queen = pygame.image.load("assets/images/white queen.png")
-white_queen = pygame.image.scale(white_queen,(80,80))
-white_queen_small = pygame.image.scale(white_queen,(45,45))
+white_king = pygame.image.load("assets/images/white king.png")
+white_king = pygame.image.scale(white_king,(80,80))
+white_king_small = pygame.image.scale(white_king,(45,45))
 
 
 
-white_queen = pygame.image.load("assets/images/white queen.png")
-white_queen = pygame.image.scale(white_queen,(80,80))
-white_queen_small = pygame.image.scale(white_queen,(45,45))
+white_rook = pygame.image.load("assets/images/white rook.png")
+white_rook = pygame.image.scale(white_rook,(80,80))
+white_rook_small = pygame.image.scale(white_rook,(45,45))
 
 
 
 
-white_queen = pygame.image.load("assets/images/white queen.png")
-white_queen = pygame.image.scale(white_queen,(80,80))
-white_queen_small = pygame.image.scale(white_queen,(45,45))
+white_bishop = pygame.image.load("assets/images/white bishop.png")
+white_bishop = pygame.image.scale(white_bishop,(80,80))
+white_bishop_small = pygame.image.scale(white_bishop,(45,45))
 
 
 
-white_queen = pygame.image.load("assets/images/white queen.png")
-white_queen = pygame.image.scale(white_queen,(80,80))
-white_queen_small = pygame.image.scale(white_queen,(45,45))
+white_knight = pygame.image.load("assets/images/white knight.png")
+white_knight = pygame.image.scale(white_knight,(80,80))
+white_knight_small = pygame.image.scale(white_knight,(45,45))
 
 
 
-white_queen = pygame.image.load("assets/images/white queen.png")
-white_queen = pygame.image.scale(white_queen,(80,80))
-white_queen_small = pygame.image.scale(white_queen,(45,45))
+white_pawn = pygame.image.load("assets/images/white pawn.png")
+white_pawn = pygame.image.scale(white_pawn,(80,80))
+white_pawn_small = pygame.image.scale(white_pawn,(45,45))
 
 
 #main game loop
