@@ -44,7 +44,47 @@ valid_moves = []
 
 #load in game piece image (queen , king, rook, kinght, pawn)
 black_queen = pygame.image.load("assets/images/black queen.png")
-black_queen = pygame.image.scale(black_queen)
+black_queen = pygame.image.scale(black_queen,(80,80))
+black_queen_small = pygame.image.scale(black_queen,(45,45))
+
+
+
+black_king = pygame.image.load("assets/images/black king.png")
+black_king = pygame.image.scale(black_king,(80,80))
+black_king_small = pygame.image.scale(black_king,(45,45))
+
+
+
+
+black_rook = pygame.image.load("assets/images/black rook.png")
+black_rook = pygame.image.scale(black_rook,(80,80))
+black_rook_small = pygame.image.scale(black_rook,(45,45))
+
+
+
+
+black_bishop = pygame.image.load("assets/images/black bishop.png")
+black_bishop = pygame.image.scale(black_bishop,(80,80))
+black_bishop_small = pygame.image.scale(black_bishop,(45,45))
+
+
+
+
+black_queen = pygame.image.load("assets/images/black queen.png")
+black_queen = pygame.image.scale(black_queen,(80,80))
+black_queen_small = pygame.image.scale(black_queen,(45,45))
+
+
+
+
+black_queen = pygame.image.load("assets/images/black queen.png")
+black_queen = pygame.image.scale(black_queen,(80,80))
+black_queen_small = pygame.image.scale(black_queen,(45,45))
+
+
+
+
+
 #main game loop
 
 run = True
