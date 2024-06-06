@@ -130,6 +130,12 @@ small_black_images = [black_pawn_small, black_queen_small, black_king_small, bla
 
 
 piece_list = ['pawn','queen','king','bishop','rook','knight']
+
+#check variable/flashing counter
+
+
+
+
 #main game loop
 
 run = True
