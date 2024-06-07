@@ -156,7 +156,8 @@ def draw_board():
         screen.blit(big_font.render(status_text[turn_step], True, 'black'),(20,820))
 
         for i in range(9):
-            pygame.draw.line(screen, 'black', (0,100 * i), (800, 100 *i))
+            pygame.draw.line(screen, 'black', (0,100 * i), (800, 100 *i),2)
+            pygame.draw.line(screen, 'black', (100 * i , 0), (100 * i , 800),2)
 
 
 #main game loop
