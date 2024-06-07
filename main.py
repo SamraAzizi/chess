@@ -148,9 +148,18 @@ def draw_board():
 
         pygame.draw.rect(screen,"gray",[0, 800,WIDTH, 100 ] )
         pygame.draw.rect(screen,"gold",[0, 800,WIDTH, 100 ],5 )
-        pygame.draw.rect(screen,"gold",[800, 0,200, HEIGHT ],5 )
+        pygame.draw.rect(screen,"gold",[800, 0,200, HEIGHT  ],5 )
+        status_text = ['White : Select a Piece To Move','White : Select a Destination'
+                       ,'Black : Select a Piece To Move','Black : Select a Destination']
 
-            #main game loop
+
+        screen.blit(big_font.render(status_text[turn_step], True, 'black'),(20,820))
+
+        for i in range(9):
+            pygame.draw.line(screen, 'black', (0,100 * i), (800, 100 *i))
+
+
+#main game loop
 
 run = True
 while run:
