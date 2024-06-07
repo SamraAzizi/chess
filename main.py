@@ -162,7 +162,8 @@ def draw_board():
 #draw pieces onto boad
 
 def draw_pieces():
-    
+    for i in range(len(white_pieces)):
+        index = piece_list.index(white_pieces[i])
 #main game loop
 
 run = True
