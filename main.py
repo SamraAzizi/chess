@@ -159,7 +159,10 @@ def draw_board():
             pygame.draw.line(screen, 'black', (0,100 * i), (800, 100 *i),2)
             pygame.draw.line(screen, 'black', (100 * i , 0), (100 * i , 800),2)
 
+#draw pieces onto boad
 
+def draw_pieces():
+    
 #main game loop
 
 run = True
@@ -168,6 +171,7 @@ while run:
     screen.fill('dark gray')
 
     draw_board()
+    draw_piceces()
     
     #event handling 
 
