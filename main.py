@@ -133,15 +133,28 @@ piece_list = ['pawn','queen','king','bishop','rook','knight']
 
 #check variable/flashing counter
 
+#draw main game board
 
+def draw_board():
+    for i in range(32): 
+        column = i % 4
+        row = i // 4
+        if row %2 == 0:
+            pygame.draw.rect(screen, 'light gray' , [600 - (column * 200 ), row * 100, 100, 100])
+            
+        else:
+               
+            pygame.draw.rect(screen, 'light gray', [700 - (column * 200), row *100, 100 , 100])
 
-
-#main game loop
+       
+            #main game loop
 
 run = True
 while run:
     timer.tick(fps)
     screen.fill('dark gray')
+
+    draw_board()
     
     #event handling 
 
