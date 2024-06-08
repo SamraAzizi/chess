@@ -204,6 +204,8 @@ while run:
             run = False
 
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+            x_coord == event.pos[0] // 100
+            y_coord == event.pos[1] // 100
     
     pygame.display.flip()
 
