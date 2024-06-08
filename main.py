@@ -213,6 +213,10 @@ while run:
                     selection = white_location.index(click_coords)
                     if turn_step == 0:
                         turn_step = 1
+
+            if click_coords in valid_moves and selection != 100:
+                white_location[selection] = click_coords
+
     
     pygame.display.flip()
 
