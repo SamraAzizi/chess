@@ -37,7 +37,7 @@ captured_pieces_white = []
 captured_pieces_black = []
 
 turn_step = 0
-selection = 100
+selection = 10
 valid_moves = []
 
 
@@ -173,7 +173,7 @@ def draw_pieces():
 
         if turn_step < 2:
             if selection == i:
-                pygame.draw.rect(screen, 'red', [white_location[i][0] * 100 +1])
+                pygame.draw.rect(screen, 'red', [white_location[i][0] * 100 +1 , white_location[i][1] * 100 +1 , 100, 100], 2)
 
     for i in range(len(black_pieces)):
         index = piece_list.index(black_pieces[i])
@@ -183,6 +183,10 @@ def draw_pieces():
 
         else:
             screen.blit(black_images[index], (black_location[i][0] * 100 + 10 , black_location[i][1] * 100 +10))
+
+        if turn_step >= 2:
+            if selection == i:
+                pygame.draw.rect(screen, 'blue', [black_location[i][0] * 100 +1 , black_location[i][1] * 100 +1 , 100, 100], 2)
 #main game loop
 
 run = True
