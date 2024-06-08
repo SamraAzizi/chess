@@ -206,6 +206,7 @@ while run:
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             x_coord == event.pos[0] // 100
             y_coord == event.pos[1] // 100
+            click_coords = (x_coord, y_coord)
     
     pygame.display.flip()
 
