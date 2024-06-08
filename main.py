@@ -37,7 +37,7 @@ captured_pieces_white = []
 captured_pieces_black = []
 
 turn_step = 0
-selection = 10
+selection = 100
 valid_moves = []
 
 
@@ -203,6 +203,7 @@ while run:
         if event.type == pygame.QUIT:
             run = False
 
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
     
     pygame.display.flip()
 
