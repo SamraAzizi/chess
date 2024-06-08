@@ -171,6 +171,9 @@ def draw_pieces():
         else:
             screen.blit(white_images[index], (white_location[i][0] * 100 + 10 , white_location[i][1] * 100 +10))   
 
+        if turn_step < 2:
+            if selection == i:
+                pygame.draw.rect(screen, 'red', [white_location[i][0] * 100 +1])
 
     for i in range(len(black_pieces)):
         index = piece_list.index(black_pieces[i])
