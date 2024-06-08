@@ -207,6 +207,12 @@ while run:
             x_coord == event.pos[0] // 100
             y_coord == event.pos[1] // 100
             click_coords = (x_coord, y_coord)
+
+            if turn_step <= 1:
+                if click_coords in white_location:
+                    selection = white_location.index(click_coords)
+                    if turn_step == 0:
+                        turn_step = 1
     
     pygame.display.flip()
 
