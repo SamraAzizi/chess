@@ -231,12 +231,39 @@ while run:
                     black_location.pop(black_pieces)
 
                 
-                black_options = check_options()
-                white_options = check_options()
+                black_options = check_options(black_pieces, black_location)
+                white_options = check_options(white_pieces, white_location)
     
                 turn_step = 2
                 selection = 100
                 valid_moves = []
+
+
+
+            if turn_step > 1:
+                if click_coords in black_location:
+                    selection = black_location.index(click_coords)
+                    if turn_step == 2:
+                        turn_step = 3
+
+            if click_coords in valid_moves and selection != 100:
+                white_location[selection] = click_coords
+                if click_coords in black_location:
+                    black_pieces = black_location.index(click_coords)
+                    captured_pieces_white.append(black_pieces[black_pieces])
+                    black_pieces.pop(black_pieces)
+                    black_location.pop(black_pieces)
+
+                
+                black_options = check_options(black_pieces, black_location)
+                white_options = check_options(white_pieces, white_location)
+    
+                turn_step = 2
+                selection = 100
+                valid_moves = []
+
+
+
     pygame.display.flip()
 
 
