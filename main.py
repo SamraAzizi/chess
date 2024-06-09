@@ -190,13 +190,24 @@ def draw_pieces():
 
 #function to check all pieces valid option of board
 
-def check_options():
-    pass
+def check_options(pieces, location, turn):
+
+    moves_list = []
+    all_moves_list = []
+
+    for i in range((pieces)):
+        location = location[i]
+    return all_moves_list
+
+   
 
 
 
 
 #main game loop
+
+black_options = check_options(black_pieces, black_location, 'black')
+white_option = check_options(white_pieces, white_location, 'white')
 run = True
 while run:
     timer.tick(fps)
