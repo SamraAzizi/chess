@@ -196,7 +196,24 @@ def check_options(pieces, location, turn):
     all_moves_list = []
 
     for i in range((pieces)):
-        location = location[i]
+        locations = location[i]
+        piece = pieces[i]
+        if piece == 'pawn':
+            moves_list = check_pawn(location, turn)
+        
+        elif piece == 'rook':
+            moves_list = check_rook(location)
+
+        elif piece == 'knight':
+            moves_list = check_knight(location)
+
+        elif piece == 'rook':
+            moves_list = check_rook(location)
+
+        elif piece == 'rook':
+            moves_list = check_rook(location)
+
+
     return all_moves_list
 
    
