@@ -202,17 +202,23 @@ def check_options(pieces, location, turn):
             moves_list = check_pawn(location, turn)
         
         elif piece == 'rook':
-            moves_list = check_rook(location)
+            moves_list = check_rook(location, turn)
 
         elif piece == 'knight':
-            moves_list = check_knight(location)
+            moves_list = check_knight(location, turn)
 
-        elif piece == 'rook':
-            moves_list = check_rook(location)
+        elif piece == 'bishop':
+            moves_list = check_bishop(location, turn)
 
-        elif piece == 'rook':
-            moves_list = check_rook(location)
+        elif piece == 'king':
+            moves_list = check_king(location, turn)
 
+
+        elif piece == 'queen':
+            moves_list = check_queen(location, turn)
+
+
+        all_moves_list.append(moves_list)
 
     return all_moves_list
 
