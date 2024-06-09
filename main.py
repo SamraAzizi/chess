@@ -187,8 +187,16 @@ def draw_pieces():
         if turn_step >= 2:
             if selection == i:
                 pygame.draw.rect(screen, 'blue', [black_location[i][0] * 100 +1 , black_location[i][1] * 100 +1 , 100, 100], 2)
-#main game loop
 
+#function to check all pieces valid option of board
+
+def check_options():
+    pass
+
+
+
+
+#main game loop
 run = True
 while run:
     timer.tick(fps)
@@ -221,7 +229,14 @@ while run:
                     captured_pieces_white.append(black_pieces[black_pieces])
                     black_pieces.pop(black_pieces)
                     black_location.pop(black_pieces)
+
+                
+                black_options = check_options()
+                white_options = check_options()
     
+                turn_step = 2
+                selection = 100
+                valid_moves = []
     pygame.display.flip()
 
 
