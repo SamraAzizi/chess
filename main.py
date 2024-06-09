@@ -247,18 +247,18 @@ while run:
                         turn_step = 3
 
             if click_coords in valid_moves and selection != 100:
-                white_location[selection] = click_coords
-                if click_coords in black_location:
-                    black_pieces = black_location.index(click_coords)
-                    captured_pieces_white.append(black_pieces[black_pieces])
-                    black_pieces.pop(black_pieces)
-                    black_location.pop(black_pieces)
+                black_location[selection] = click_coords
+                if click_coords in white_location:
+                    white_pieces = white_location.index(click_coords)
+                    captured_pieces_white.append(white_pieces[white_pieces])
+                    white_pieces.pop(white_pieces)
+                    white_location.pop(white_pieces)
 
                 
                 black_options = check_options(black_pieces, black_location)
                 white_options = check_options(white_pieces, white_location)
     
-                turn_step = 2
+                turn_step = 0
                 selection = 100
                 valid_moves = []
 
