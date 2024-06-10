@@ -265,6 +265,19 @@ def check_pawn(position, color):
 
     return moves_list
 
+
+# check for valid moves for just selected piece
+
+def check_valid_moves():
+    if turn_step < 2:
+        option_list = white_option
+    else:
+        option_list = black_options
+#draw valid moves on screen
+def draw_valid():
+    pass
+
+
 #main game loop
 
 black_options = check_options(black_pieces, black_location, 'black')
@@ -276,6 +289,9 @@ while run:
 
     draw_board()
     draw_pieces()
+    if selection != 100:
+        valid_moves = check_valid_moves()
+        draw_valid(valid_moves)
     
     #event handling 
 
