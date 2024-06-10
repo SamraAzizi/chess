@@ -234,8 +234,14 @@ def check_pawn(position, color):
 
 
         if (position[0], position[1] + 2) not in white_location and \
-            (position[0], position[1] + 1) not in black_location and position[1] < 7:
-            moves_list.append((position[0], position[1] + 1))
+            (position[0], position[1] + 1) not in black_location and position[1] ==1:
+            moves_list.append((position[0], position[1] + 2))
+
+        if (position[0] +1 , position[1] + 1) in black_location:
+            moves_list.append((position[0] +1 , position[1] +1 ))
+
+        if (position[0] -1 , position[1] + 1) in black_location:
+            moves_list.append((position[0] -1, position[1] +1 ))
 
 
 
