@@ -273,9 +273,16 @@ def check_valid_moves():
         option_list = white_option
     else:
         option_list = black_options
+    valid_option = option_list[selection]
+    return valid_option
+
 #draw valid moves on screen
 def draw_valid():
-    pass
+    if turn_step <2:
+        color = 'red'
+    else:
+        color = 'blue'
+    for i in range(len(moves))
 
 
 #main game loop
