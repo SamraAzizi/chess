@@ -223,6 +223,19 @@ def check_options(pieces, location, turn):
     return all_moves_list
 
    
+#check valid pawn moves
+
+def check_pawn(position, color):
+    moves_list = []
+    if color == 'white':
+        if (position[0], position[1] + 1) not in white_location and \
+            (position[0], position[1] + 1) not in black_location and position[1] < 7:
+            moves_list.append((position[0], position[1] + 1))
+
+
+        if (position[0], position[1] + 2) not in white_location and \
+            (position[0], position[1] + 1) not in black_location and position[1] < 7:
+            moves_list.append((position[0], position[1] + 1))
 
 
 
