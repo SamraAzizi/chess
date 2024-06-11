@@ -235,6 +235,11 @@ def check_rook(position, color):
         enemies_list = white_location
 
     for i in range(4):  # up, down , right, left
+        path = True
+        chain  = 1
+        if i == 0:
+            x = 0
+            y = 1
 
 
 
