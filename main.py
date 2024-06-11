@@ -251,6 +251,10 @@ def check_rook(position, color):
             x = -1
             y = 0
 
+        while path:
+            if (position[0] + (chain * x), position[1] + (chain * y)) not in friends_list and
+            0 <= position[0] + (chain  * x) <= 7 and 0 <= position[1] + chain
+
 
 
     return moves_list()
