@@ -257,12 +257,13 @@ def check_rook(position, color):
                 moves_list.append((position[0] + (chain * x),position[1] + (chain * y)))
                 if(position[0] * (chain * x), position[1] + (chain * y)) in enemies_list:
                     path = False
+                    chain += 1
                 
             else:
-                chain += 1
+                path = False
 
 
-    return moves_list()
+    return moves_list
 
    
 #check valid pawn moves
