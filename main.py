@@ -241,6 +241,16 @@ def check_rook(position, color):
             x = 0
             y = 1
 
+        elif i == 1:
+            x = 0
+            y = -1
+        elif i == 2:
+            x = 1
+            y = 0
+        else:
+            x = -1
+            y = 0
+
 
 
     return moves_list()
