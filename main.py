@@ -252,9 +252,14 @@ def check_rook(position, color):
             y = 0
 
         while path:
-            if (position[0] + (chain * x), position[1] + (chain * y)) not in friends_list and
-            0 <= position[0] + (chain  * x) <= 7 and 0 <= position[1] + chain
-
+            if (position[0] + (chain * x), position[1] + (chain * y)) not in friends_list and \
+            0 <= position[0] + (chain  * x) <= 7 and 0 <= position[1] + (chain * y) <= 7:
+                moves_list.append((position[0] + (chain * x),position[1] + (chain * y)))
+                if(position[0] * (chain * x), position[1] + (chain * y)) in enemies_list:
+                    path = False
+                
+            else:
+                chain += 1
 
 
     return moves_list()
