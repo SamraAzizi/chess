@@ -195,7 +195,7 @@ def check_options(pieces, location, turn):
     moves_list = []
     all_moves_list = []
 
-    for i in range((pieces)):
+    for i in range((len(pieces))):
         locations = location[i]
         piece = pieces[i]
         if piece == 'pawn':
@@ -221,6 +221,24 @@ def check_options(pieces, location, turn):
         all_moves_list.append(moves_list)
 
     return all_moves_list
+
+#check rook moves
+
+def check_rook(position, color):
+    moves_list = []
+    if color == "white":
+        enemies_list = black_location
+        friends_list = white_location
+
+    else:
+        friends_list = black_location
+        enemies_list = white_location
+
+    for i in range(4):  # up, down , right, left
+
+
+
+    return moves_list()
 
    
 #check valid pawn moves
