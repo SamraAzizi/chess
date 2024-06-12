@@ -268,7 +268,7 @@ def check_rook(position, color):
    
 #check valid pawn moves
 
-def check_pawn(position, color):
+def check_pawn(position, color): 
     moves_list = []
     if color == 'white':
         if (position[0], position[1] + 1) not in white_location and \
@@ -322,9 +322,11 @@ def check_knight(position, color):
         enemies_list = white_location
 
         # 8 squars to check for knights, they can go two squares in one direction and one in another
-        targets = [(1,2),(1,-2),(2,1),(2,-1),(-1,2),(-1, -2),(-2,-1),(-2)]
+        targets = [(1,2),(1,-2),(2,1),(2,-1),(-1,2),(-1, -2),(-2,-1),(-2,1),(-2,-1)]
+
         for i  in range(8):
-            target = (position[0])
+            target = (position[0] + target[i][0], position[1] + target[i][1])
+            if target not in friends_list and 0 <= target[0] <= 7
 
 
     return moves_list
