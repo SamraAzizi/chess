@@ -326,7 +326,8 @@ def check_knight(position, color):
 
         for i  in range(8):
             target = (position[0] + target[i][0], position[1] + target[i][1])
-            if target not in friends_list and 0 <= target[0] <= 7
+            if target not in friends_list and 0 <= target[0] <= 7 and 0 <= target[1] <= 7:
+                moves_list.append(target)
 
 
     return moves_list
