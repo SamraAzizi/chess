@@ -233,7 +233,7 @@ def check_bishop(position, color):
     else:
         friends_list = black_location
         enemies_list = white_location
-
+for i in rage():
 
 
 #check rook moves
