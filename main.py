@@ -311,7 +311,25 @@ def check_pawn(position, color):
 #check valid knight moves
 
 def check_knight(position, color):
-    
+    moves_list = []
+
+    if color == "white":
+        enemies_list = black_location
+        friends_list = white_location
+
+    else:
+        friends_list = black_location
+        enemies_list = white_location
+
+        # 8 squars to check for knights, they can go two squares in one direction and one in another
+        targets = [(1,2),(1,-2),(2,1),(2,-1),(-1,2),(-1, -2),(-2,-1),(-2)]
+        for i  in range(8):
+            target = (position[0])
+
+
+    return moves_list
+
+
 
 
 # check for valid moves for just selected piece
