@@ -222,6 +222,20 @@ def check_options(pieces, location, turn):
 
     return all_moves_list
 
+# check bishop moves
+
+def check_bishop(position, color):
+    moves_list = []
+    if color == "white":
+        enemies_list = black_location
+        friends_list = white_location
+
+    else:
+        friends_list = black_location
+        enemies_list = white_location
+
+
+
 #check rook moves
 
 def check_rook(position, color):
