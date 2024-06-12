@@ -308,6 +308,11 @@ def check_pawn(position, color):
 
     return moves_list
 
+#check valid knight moves
+
+def check_knight(position, color):
+    
+
 
 # check for valid moves for just selected piece
 
