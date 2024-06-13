@@ -223,15 +223,45 @@ def check_options(pieces, location, turn):
     return all_moves_list
 
 
+# check valid king moves
+
+def check_king(position, color):
+    moves_list = []
+
+    if color == "white":
+        enemies_list = black_location
+        friends_list = white_location
+
+    else:
+        friends_list = black_location
+        enemies_list = white_location
+
+
+         # 8 squars to check for knights, they can go two squares in one direction and one in another
+        targets = [(1,2),(1,-2),(2,1),(2,-1),(-1,2),(-1, -2),(-2,-1),(-2,1),(-2,-1)]
+
+        for i  in range(8):
+            target = (position[0] + target[i][0], position[1] + target[i][1])
+            if target not in friends_list and 0 <= target[0] <= 7 and 0 <= target[1] <= 7:
+                moves_list.append(target)
+
+
+
+    return moves_list
+
+
 # check valid queen moves
 
-def check_queen(position, color):
+def check_queen(position, color): 
 
     moves_list = check_bishop(position, color)
     second_list = check_rook(position, color)
 
     for i in range(len(second_list)):
         moves_list.append(second_list[i])
+
+    
+    return moves_list
 
 
 
