@@ -237,8 +237,8 @@ def check_king(position, color):
         enemies_list = white_location
 
 
-         # 8 squars to check for knights, they can go two squares in one direction and one in another
-        targets = [(1,2),(1,-2),(2,1),(2,-1),(-1,2),(-1, -2),(-2,-1),(-2,1),(-2,-1)]
+         # 8 squars to check for kings, they can go one square any direction
+        targets = [(1,2),(1,1),(1,-1),(-1,0),(-1,0),(-1, -1),(-2,-1),(0,1),(0,-1)]
 
         for i  in range(8):
             target = (position[0] + target[i][0], position[1] + target[i][1])
@@ -446,6 +446,16 @@ def draw_valid(moves):
         pygame.draw.cirlce(screen, color, (moves[i][0] * 100 +50, moves[i][1] *100+ 500),5)
 
 
+# draw captured pieces on side of screen
+
+def draw_captured():
+
+    for i in range(len(captured_pieces_white)):
+        captured_piece = captured_pieces_white[i]
+        index = piece_list.index(captured_piece)
+        screen.blit(small_black_images)
+
+
 #main game loop
 
 black_options = check_options(black_pieces, black_location, 'black')
@@ -457,6 +467,7 @@ while run:
 
     draw_board()
     draw_pieces()
+    draw_captured()
     if selection != 100:
         valid_moves = check_valid_moves()
         draw_valid(valid_moves)
