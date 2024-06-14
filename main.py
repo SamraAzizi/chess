@@ -132,6 +132,7 @@ small_black_images = [black_pawn_small, black_queen_small, black_king_small, bla
 piece_list = ['pawn','queen','king','bishop','rook','knight']
 
 #check variable/flashing counter
+counter = 0
 
 #draw main game board
 
@@ -469,6 +470,10 @@ white_option = check_options(white_pieces, white_location, 'white')
 run = True
 while run:
     timer.tick(fps)
+    if counter < 30:
+        counter += 1
+    else:
+        counter = 0
     screen.fill('dark gray')
 
     draw_board()
