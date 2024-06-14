@@ -466,7 +466,7 @@ def draw_captured():
 #draw a flashing square around king if in check
 
 def draw_check():
-    checked = False
+    
     if turn_step < 2:
         king_index = white_pieces.index('king')
         king_location = white_location[king_index]
@@ -474,20 +474,20 @@ def draw_check():
         for i in range(len(black_options)):
             if king_location in black_options[i]:
                 if counter < 15:
-                    pygame.draw.rect(screen, 'dark red', [white_locations[king_index][0] * 100 +1,
+                    pygame.draw.rect(screen, 'dark red', [white_location[king_index][0] * 100 +1,
                                                                         white_location[king_index[1] * 100 +1, 1, 1, 1],5])
                     
 
 
-    if turn_step  2:
-        king_index = white_pieces.index('king')
-        king_location = white_location[king_index]
+    else:
+        king_index = black_pieces.index('king')
+        king_location = black_location[king_index]
 
-        for i in range(len(black_options)):
+        for i in range(len(white_options)):
             if king_location in black_options[i]:
                 if counter < 15:
-                    pygame.draw.rect(screen, 'dark red', [white_locations[king_index][0] * 100 +1,
-                                                                        white_location[king_index[1] * 100 +1, 1, 1, 1],5])
+                    pygame.draw.rect(screen, 'dark blue', [black_location[king_index][0] * 100 +1,
+                                                                        black_location[king_index[1] * 100 +1, 1, 1, 1],5])
 #main game loop
 
 black_options = check_options(black_pieces, black_location, 'black')
