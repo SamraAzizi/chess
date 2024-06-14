@@ -463,6 +463,10 @@ def draw_captured():
         screen.blit(small_white_images[index] , (825, 5 + 50*i))
 
 
+#draw a flashing square around king if in check
+
+def draw_check():
+    checked = False
 #main game loop
 
 black_options = check_options(black_pieces, black_location, 'black')
@@ -479,6 +483,7 @@ while run:
     draw_board()
     draw_pieces()
     draw_captured()
+    draw_check()
     if selection != 100:
         valid_moves = check_valid_moves()
         draw_valid(valid_moves)
