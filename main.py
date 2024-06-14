@@ -467,6 +467,14 @@ def draw_captured():
 
 def draw_check():
     checked = False
+    if turn_step < 2:
+        king_index = white_pieces.index('king')
+        king_location = white_location[king_index]
+
+        for i in range(len(black_options)):
+            if king_location in black_options[i]:
+                if counter < 15:
+                    pygame.draw.rect()
 #main game loop
 
 black_options = check_options(black_pieces, black_location, 'black')
