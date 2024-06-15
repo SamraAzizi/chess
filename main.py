@@ -496,9 +496,9 @@ def draw_check():
 #draw game over function
 
 def draw_game_over():
-    pygame.draw.rect(screen, 'black',[200,200,400,50])
+    pygame.draw.rect(screen, 'black',[200,200,400,70])
     screen.blit(font.render(f"{winner} won the game", True, 'white'),(210,210))
-    screen.blit(font.render(f"Press Enter to Restart!", True, 'white'),(210,210))
+    screen.blit(font.render(f"Press Enter to Restart!", True, 'white'),(210,240))
 
 
 
@@ -529,7 +529,7 @@ while run:
         if event.type == pygame.QUIT:
             run = False
 
-        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and not game_over:
             x_coord == event.pos[0] // 100
             y_coord == event.pos[1] // 100
             click_coords = (x_coord, y_coord)
@@ -585,9 +585,9 @@ while run:
                 selection = 100
                 valid_moves = []
 
-    if winner != '':
-        game_over = True
-        draw_game_over()
+if winner != '':
+    game_over = True
+    draw_game_over()
 
 
 
