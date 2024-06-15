@@ -492,6 +492,16 @@ def draw_check():
                     if counter < 15:
                         pygame.draw.rect(screen, 'dark blue', [black_location[king_index][0] * 100 +1,
                                                                         black_location[king_index][1] * 100 +1, 1, 1, 1],5)
+
+#draw game over function
+
+def draw_game_over():
+    pygame.draw.rect(screen, 'black',[200,200,400,50])
+    screen.blit(font.render(f"{winner} won the game", True, 'white'),(210,210))
+    screen.blit(font.render(f"Press Enter to Restart!", True, 'white'),(210,210))
+
+
+
 #main game loop
 
 black_options = check_options(black_pieces, black_location, 'black')
