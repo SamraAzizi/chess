@@ -597,6 +597,11 @@ while run:
 
                 captured_pieces_white = []
                 captured_pieces_black = []
+                turn_step = 0
+                selection = 100
+                valid_moves = []
+                black_options = check_options(black_pieces, black_location, 'black')
+                white_option = check_options(white_pieces, white_location, 'white')
 if winner != '':
     game_over = True
     draw_game_over()
