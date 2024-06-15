@@ -584,7 +584,8 @@ while run:
                 turn_step = 0
                 selection = 100
                 valid_moves = []
-
+        if event.type == pygame.KEYDOWN and game_over:
+            if event.key == pygame.K_RETURN     
 if winner != '':
     game_over = True
     draw_game_over()
