@@ -530,6 +530,8 @@ while run:
             click_coords = (x_coord, y_coord)
 
             if turn_step <= 1:
+                if click_coords == (8,8) or click_coords ==(9,8):
+                    winner = 'black'
                 if click_coords in white_location:
                     selection = white_location.index(click_coords)
                     if turn_step == 0:
@@ -557,6 +559,8 @@ while run:
 
 
             if turn_step > 1:
+                if click_coords == (8,8) or click_coords ==(9,8):
+                    winner = 'white'
                 if click_coords in black_location:
                     selection = black_location.index(click_coords)
                     if turn_step == 2:
