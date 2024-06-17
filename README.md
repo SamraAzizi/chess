@@ -20,25 +20,3 @@ This is a two-player chess game implemented in Python using the Pygame library. 
 2. Install Pygame using pip:
     ```sh
     pip install pygame
-    ```
-
-## How to Run
-1. Clone the repository or download the source code files.
-2. Navigate to the directory containing the files.
-3. Run the Python script:
-    ```sh
-    python chess.py
-    ```
-
-## Files
-- `chess.py`: The main script containing the game logic and Pygame setup.
-
-## Game Controls
-- **Mouse**: Click to select and move pieces.
-- **Keyboard**: Press `Enter` to restart the game after it ends.
-
-## Code Structure
-### Variables and Initialization
-- Initialize Pygame, set up display, and load fonts.
-- Define game variables and load piece images.
-
