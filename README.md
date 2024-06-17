@@ -59,11 +59,3 @@ This is a two-player chess game implemented in Python using the Pygame library. 
 - Handles game logic, including piece selection, move validation, capturing pieces, and turn management.
 - Detects game over conditions and handles restarting the game.
 
-## Credits
-This game was developed using Python and Pygame. 
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-## Contact
-For any questions or feedback, please contact [your email or GitHub profile].
