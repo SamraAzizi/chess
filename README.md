@@ -50,3 +50,12 @@ This is a two-player chess game implemented in Python using the Pygame library. 
 - `draw_check()`: Highlights the king in check.
 - `draw_game_over()`: Displays game over screen.
 
+### Move Validation Functions
+- `check_options()`: Checks all valid moves for pieces.
+- `check_king()`, `check_queen()`, `check_bishop()`, `check_rook()`, `check_pawn()`, `check_knight()`: Individual functions for validating moves of each piece.
+- `check_valid_moves()`: Checks valid moves for the selected piece.
+
+### Main Game Loop
+- Handles game logic, including piece selection, move validation, capturing pieces, and turn management.
+- Detects game over conditions and handles restarting the game.
+
