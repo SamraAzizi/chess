@@ -1,4 +1,4 @@
-# Two-Player Pygame Chess
+
 
 ## Overview
 This is a two-player chess game implemented in Python using the Pygame library. The game features all standard chess pieces, valid move checks for each piece, and a graphical user interface for an engaging gaming experience.
