@@ -4,8 +4,7 @@
 import pygame
 
 pygame.init()
-WIDTH = 1000
-HEIGHT = 900
+
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
 pygame.display.set_caption('Two-Player Pygame Chess!')
 font = pygame.font.Font('freesansbold.ttf', 20)
