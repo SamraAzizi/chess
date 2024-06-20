@@ -2,6 +2,8 @@
 # part one, set up variables images and game loop
 
 import pygame
+WIDTH = 1000
+HEIGHT = 900
 
 pygame.init()
 
